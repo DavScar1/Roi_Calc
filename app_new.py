@@ -19,7 +19,7 @@ def roi():
 
             if cost <= 0 or revenue < 0:
                 message = ("Cost can't be 0 or less or Revenue can't be negative", "error")
-                return render_template("new_results.html", message=message, cost=cost, revenue=revenue, currency=currency, symbol=symbol)
+                return render_template("newer_results.html", message=message, cost=cost, revenue=revenue, currency=currency, symbol=symbol)
 
             roi = round((((revenue - cost) / cost) * 100), 2)
             message = ("Calculation successful!", "success")
@@ -37,13 +37,13 @@ def roi():
             history.insert(0, calculation)
             session["history"] = history[:3]
 
-            return render_template("new_results.html", revenue=revenue, cost=cost, profit=profit, roi=roi, currency=currency, symbol=symbol, message=message, history=session.get("history", []))
+            return render_template("newer_results.html", revenue=revenue, cost=cost, profit=profit, roi=roi, currency=currency, symbol=symbol, message=message, history=session.get("history", []))
 
         except (ValueError, TypeError):
             currency = request.form.get("currency", "USD")
             symbol = get_currency_symbol(currency)
             message = ("Invalid input. Enter numbers only.", "error")
-            return render_template("new_results.html", message=message, currency=currency, symbol=symbol)
+            return render_template("newer_results.html", message=message, currency=currency, symbol=symbol)
     return render_template("new_form.html")
 
 def get_currency_symbol(code):
@@ -55,4 +55,4 @@ def get_currency_symbol(code):
 
 
 if __name__ == "__main__":
-    app.run(debug=False, host='0.0.0.0', port=5000)
+    app.run()

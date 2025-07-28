@@ -34,8 +34,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "Python.app.executor": "Run",
     "Python.app_new.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+    "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
   <component name="RecentsManager">
