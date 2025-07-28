@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ROI Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>ROI Results</h1>
+
+    <div class="result-block">
+      <p><strong>Revenue:</strong> {{ symbol }}{{ revenue }}</p>
+      <p><strong>Cost:</strong> {{ symbol }}{{ cost }}</p>
+      <p><strong>Profit:</strong> {{ symbol }}{{ profit }}</p>
+      <p><strong>ROI:</strong> {{ roi }}%</p>
+    </div>
+
+    <h2>Recent Calculations</h2>
+    {% if history %}
+      <ul class="history-list">
+        {% for item in history %}
+          <li>
+              Revenue: {{ item.symbol }}{{ item.revenue }}, <br>
+              Cost: {{ item.symbol }}{{ item.cost }}, <br>
+              Profit: {{ item.symbol }}{{ item.profit }}, <br>
+              ROI: {{ item.roi }}%
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No history available.</p>
+    {% endif %}
+
+    <a href="/" class="back-button">← Back to Calculator</a>
+  </div>
+</body>
+</html>
