@@ -26,25 +26,25 @@ ROI = (Net Profit / Cost of Investment) × 100
 ## 🔧 How to Run Locally
 
 
-# Clone the repository:
+### Clone the repository:
    
     git clone https://github.com/DavScar1/Roi_Calc
    cd roi-calculator
 
-2. Create and activate a virtual environment:
+### Create and activate a virtual environment:
 
 python -m venv venv
 source venv/bin/activate  
 
-3. Install dependencies:
+### Install dependencies:
 
 pip install -r requirements.txt
 
-4. Run the Flask app:
+### Run the Flask app:
 
 python app.py
 
-5. Open http://127.0.0.1:5000 in your browser.
+### Open http://127.0.0.1:5000 in your browser.
 
 
 📂 Folder Structure
