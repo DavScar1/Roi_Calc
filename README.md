@@ -23,6 +23,9 @@ Built with Python, HTML/CSS, and Flask.
 ## 🧠 How ROI is Calculated
 ROI = (Net Profit / Cost of Investment) × 100
 
+## Video Walk-Through
+[![Watch the demo](https://img.youtube.com/vi/4mCWbmi66wo/maxresdefault.jpg)](https://www.youtube.com/watch?v=4mCWbmi66wo)
+
 ## 🔧 How to Run Locally
 
 
