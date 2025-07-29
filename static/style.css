@@ -12,6 +12,7 @@ body {
   color: #333;
   min-height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 50px 20px;
 }
@@ -24,6 +25,7 @@ body {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  flex-wrap: wrap;
 }
 
 /* ===== Title ===== */
@@ -32,6 +34,7 @@ h1 {
   font-size: 26px;
   margin-bottom: 30px;
   color: #1f2937;
+  flex-wrap: wrap;
 }
 
 /* ===== Form ===== */
@@ -39,6 +42,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 /* ===== Labels ===== */
@@ -47,6 +51,7 @@ label {
   color: #374151;
   margin-bottom: 5px;
   display: block;
+  flex-wrap: wrap;
 }
 
 /* ===== Inputs & Selects ===== */
@@ -59,12 +64,14 @@ select {
   background-color: #fff;
   color: #111827;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 input:focus,
 select:focus {
   border-color: #2563eb;
   outline: none;
+  flex-wrap: wrap;
 }
 
 /* ===== Submit & Back Buttons ===== */
@@ -83,11 +90,13 @@ button,
   display: inline-block;
   margin-top: 30px; /* or whatever value you want */
   display: inline-block; /* make sure margin works correctly */
+  flex-wrap: wrap;
 }
 
 button:hover,
 .back-button:hover {
   background-color: #1e40af;
+  flex-wrap: wrap;
 }
 
 /* ===== Result Box ===== */
@@ -103,23 +112,28 @@ button:hover,
   line-height: 1.6;
   font-weight: 500;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  flex-wrap: wrap;
 }
 
 .result p {
   margin-bottom: 10px;
   color: #374151;
+  flex-wrap: wrap;
 }
 
 .result strong {
   color: #2563eb;
   font-weight: 600;
   font-size: 16.5px;
+  flex-wrap: wrap;
 }
 
 .result-divider {
   height: 1px;
   background-color: #e5e7eb;
   margin: 20px 0;
+  flex-wrap: wrap;
+
 }
 
 /* ===== History Section ===== */
@@ -129,6 +143,7 @@ button:hover,
   background-color: #f9fafb;
   border: 1px solid #e5e7eb;
   border-radius: 6px;
+  flex-wrap: wrap;
 }
 
 .history h2 {
@@ -136,21 +151,25 @@ button:hover,
   margin-bottom: 10px;
   margin-top: 20px;
   color: #1f2937;
+  flex-wrap: wrap;
 }
 
 .history ul {
   list-style: none;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .history li {
   font-size: 14px;
   padding: 8px 0;
   border-bottom: 1px solid #e5e7eb;
+  flex-wrap: wrap;
 }
 
 .history li:last-child {
   border-bottom: none;
+  flex-wrap: wrap;
 }
 
 /* ===== Optional Result Block Variant ===== */
@@ -162,10 +181,12 @@ button:hover,
   margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.6;
+  flex-wrap: wrap;
 }
 
 .result-block p {
   margin: 8px 0;
+  flex-wrap: wrap;
 }
 
 /* ===== History List Variant ===== */
@@ -174,6 +195,7 @@ button:hover,
   padding: 0;
   margin-top: 20px;
   margin-bottom: 0px;
+  flex-wrap: wrap;
 }
 
 .history-list li {
@@ -182,20 +204,24 @@ button:hover,
   border-radius: 8px;
   margin-bottom: 10px;
   font-size: 14px;
+  flex-wrap: wrap;
 }
 
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
   body {
     padding: 30px 15px;
+    flex-wrap: wrap;
   }
 
   .container {
     padding: 20px;
+    flex-wrap: wrap;
   }
 
   h1 {
     font-size: 22px;
+    flex-wrap: wrap;
   }
 }
 
@@ -209,16 +235,19 @@ button:hover,
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', sans-serif;
+  flex-wrap: wrap;
 }
 
 h1, h2 {
   color: #333;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 ul {
   margin-top: 10px;
   padding-left: 20px;
+  flex-wrap: wrap;
 }
 
 a {
@@ -226,9 +255,45 @@ a {
   margin-top: 20px;
   color: #0077cc;
   text-decoration: none;
+  flex-wrap: wrap;
 }
 
 a:hover {
   text-decoration: underline;
+  flex-wrap: wrap;
 }
 
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  form {
+    gap: 15px;
+  }
+
+  label,
+  input,
+  select,
+  button {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .result {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .back-button {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
