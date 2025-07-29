@@ -25,7 +25,8 @@ ROI = (Net Profit / Cost of Investment) × 100
 
 ## 🔧 How to Run Locally
 
-1. Clone the repository:
+
+# Clone the repository:
    
     git clone https://github.com/DavScar1/Roi_Calc
    cd roi-calculator
