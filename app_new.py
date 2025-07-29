@@ -17,9 +17,14 @@ def roi():
             symbol = get_currency_symbol(currency)
             profit = revenue - cost
 
+            formatted_revenue = f"{revenue:,.2f}"
+            formatted_cost = f"{cost:,.2f}"
+            formatted_profit = f"{profit:,.2f}"
+
+
             if cost <= 0 or revenue < 0:
                 message = ("Cost can't be 0 or less or Revenue can't be negative", "error")
-                return render_template("newer_results.html", message=message, cost=cost, revenue=revenue, currency=currency, symbol=symbol)
+                return render_template("newer_results.html", message=message, cost=formatted_cost, revenue=formatted_revenue, currency=currency, symbol=symbol)
 
             roi = round((((revenue - cost) / cost) * 100), 2)
             message = ("Calculation successful!", "success")
@@ -37,7 +42,7 @@ def roi():
             history.insert(0, calculation)
             session["history"] = history[:3]
 
-            return render_template("newer_results.html", revenue=revenue, cost=cost, profit=profit, roi=roi, currency=currency, symbol=symbol, message=message, history=session.get("history", []))
+            return render_template("newer_results.html", revenue=formatted_revenue, cost=formatted_cost, profit=formatted_profit, roi=roi, currency=currency, symbol=symbol, message=message, history=session.get("history", []))
 
         except (ValueError, TypeError):
             currency = request.form.get("currency", "USD")
@@ -57,6 +62,8 @@ def get_currency_symbol(code):
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+
 
 
 if __name__ == "__main__":
